@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helm:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-01-23T00:30:52.457776+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 7d18c0d94fec06f2281e3d062aa24d88a12e04d063aa2bf7380a9ac8b7e347b2
+    name: helm
+    type: application
+    urls:
+    - https://github.com/cacapouh/istio-example/helm-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-23T00:30:52.457273+09:00"
