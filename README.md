@@ -1038,3 +1038,8 @@ $ SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway
 $ curl "http://$INGRESS_HOST:$INGRESS_PORT"
 1: simple-app-deployment-dd44b5ff4-nhgbn!
 ```
+
+```
+$ echo "http://$INGRESS_HOST:$INGRESS_PORT"
+http://127.0.0.1:80
+```
