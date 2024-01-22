@@ -1030,3 +1030,11 @@ $ sh send_request.sh
 500: simple-app-deployment-dd44b5ff4-6fc7q!Request 999 completed
 500: simple-app-deployment-dd44b5ff4-nk7z4!Request 1000 completed
 ```
+
+```
+$ INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+$ INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+$ SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}')
+$ curl "http://$INGRESS_HOST:$INGRESS_PORT"
+1: simple-app-deployment-dd44b5ff4-nhgbn!
+```
